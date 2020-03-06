@@ -84,13 +84,20 @@ header img{
 
 .partidas .container{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.proximas_partidas{
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-flow: wrap;
 }
 
 .partida img{
     width: 40px; 
+    padding: 0 8px;
 }
 
 .partidas h2{
@@ -184,7 +191,8 @@ header img{
     z-index: 99;
     top: -20px;
     width: 100%;
-    max-width: 40%;
+    left: 200px;
+    max-width: 35%;
 }
 
 .texto_sobre{
@@ -424,3 +432,56 @@ select{
 .form_cadastro .campo:nth-child(10) button{
     margin: auto;
 }
+
+/* Início Responsividade */
+/* 800px */
+
+@media(max-width: 800px){
+    .container{
+        width: 90%;
+    }
+    header .container img{
+        max-width: 180px;
+    }
+    .partidas .container{
+        align-items: flex-start;
+        flex-flow: nowrap;
+    }
+
+    .em_andamento{
+        width: 30%;
+    }
+
+    .proximas_partidas{
+        width: 70%;
+        flex-flow: wrap;
+    }
+
+    .ligas h4{
+        font-size: 30px;
+    }
+
+    .ligas h3{
+        font-size: 60px;
+    }
+
+    .ligas img{
+        height: 90px;
+    }
+
+    .sobre img{
+        max-width: 50%;
+        left: 20px;
+        margin-top: 120px;
+    }
+
+    .texto sobre{
+        width: 50%;
+        margin-right: 50px;
+    }
+
+    .content{
+        margin-top: 30px;
+    }
+
+}/* Fim Media Query 800px*/
