@@ -433,12 +433,15 @@ select{
     margin: auto;
 }
 
+header .fa-bars{
+    display: none;
+}
 /* Início Responsividade */
 /* 800px */
 
 @media(max-width: 800px){
     .container{
-        width: 90%;
+        width: 95%;
     }
     header .container img{
         max-width: 180px;
@@ -484,4 +487,48 @@ select{
         margin-top: 30px;
     }
 
+    .card img{
+        margin-top: 2.5em;
+        margin-left: 1em;
+    }
+
+    .resultado p{
+        margin-top: 0.2px;
+    }
+    footer form{
+        margin-left: 2em;
+    }
+
 }/* Fim Media Query 800px*/
+/* Mobile*/
+@media(max-width: 460px){
+    header .fa-bars{
+        color: var(--purple);
+        font-size: 3em;
+        display: block;
+    }
+    header .container div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container div a{
+        margin-left: 7em;
+    }
+    #menu{
+        position: absolute;
+        top: 5.5em;
+        left: 0;
+        width: 100%;
+        background-color: var(--purple);
+    }
+    #menu ul{
+        flex-direction: column;
+        height: 350px;
+        margin-left: 1em;
+    }
+    #menu a{
+        display: block;
+        padding: 0.5em 0em;
+    }
+}
